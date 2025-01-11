@@ -1,0 +1,41 @@
+@import "./variable.scss";
+@mixin admin-input {
+  padding: 12px;
+  flex: 1;
+  font-family: Montserrat-Medium;
+  font-size: 14px;
+  border: none;
+  border-radius: 12px;
+  border: 1px solid rgba($BRANDPANTONE, 0.5);
+  transition: all ease-in-out 0.25s;
+  outline: 3px solid transparent;
+  &:hover {
+    outline: 3px solid rgba($BRANDPANTONE, 0.5);
+  }
+  &:focus {
+    outline: 3px solid rgba($BRANDPANTONE, 1);
+  }
+}
+
+@mixin admin-input-btn {
+  background-color: rgba($BRANDORANGE, 1);
+  border: none;
+  border-radius: 12px;
+  color: $BRANDCREAMWHITE;
+  padding: 12px;
+  cursor: pointer;
+  font-family: Montserrat-Medium;
+  font-size: 14px;
+  transition: all ease-in-out .25s;
+  outline: 3px solid transparent;
+  &:hover{
+    outline: 3px solid rgba($BRANDORANGE, 0.5);
+  }
+  &:active{
+    transform: scale(0.99);
+  }
+  &:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}

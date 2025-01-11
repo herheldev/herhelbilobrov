@@ -1,0 +1,30 @@
+@import "../../sass/abstract/variable.scss";
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  background-color: $BRANDBRIGHTSANDY;
+  // overflow-x: hidden;
+  // overflow-y: scroll;
+
+  // scrollbar-width: none;
+  z-index: 10;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
+  // scroll-snap-type: y mandatory;
+  @media (min-width: 1273px) {
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+  }
+  @media (min-width: 769px) and (max-width: 1272px) {
+    border-top-left-radius: 64px;
+    border-top-right-radius: 64px;
+  }
+  @media (min-width: 200px) and (max-width: 768px) {
+    border-top-left-radius: 48px;
+    border-top-right-radius: 48px;
+  }
+}

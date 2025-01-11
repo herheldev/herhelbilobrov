@@ -1,0 +1,206 @@
+@import "../../sass/abstract/variable.scss";
+.about {
+  background-color: $BRANDCREAMWHITE;
+  color: $BRANDBLACK;
+  max-height: fit-content;
+  height: fit-content;
+  @media (min-width: 1273px) {
+    border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 90px;
+  }
+  @media (min-width: 769px) and (max-width: 1272px) {
+    border-bottom-left-radius: 64px;
+    border-bottom-right-radius: 64px;
+  }
+  @media (min-width: 769px) and (max-width: 850px) {
+    height: fit-content;
+    max-height: fit-content;
+  }
+  @media (min-width: 200px) and (max-width: 768px) {
+    border-bottom-left-radius: 48px;
+    border-bottom-right-radius: 48px;
+    height: fit-content;
+    max-height: fit-content;
+  }
+  &__container.container {
+    gap: 24px;
+    min-height: 900px;
+    height: fit-content;
+    flex-direction: column;
+    @media (min-width: 200px) and (max-width: 850px) {
+      gap: 0;
+    }
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    @media (min-width: 1273px) {
+      font-size: 100px;
+    }
+    @media (min-width: 769px) and (max-width: 1272px) {
+      font-size: 72px;
+      flex-direction: column;
+    }
+    @media (min-width: 200px) and (max-width: 768px) {
+      gap: 16px;
+      flex-direction: column;
+    }
+    & div{
+      display: flex;
+      flex-direction: column;
+    }
+    & h1 {
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      text-wrap: nowrap;
+      opacity: 0;
+      transform: translateY(20px);
+      @media (min-width: 1273px) {
+        font-size: 100px;
+      }
+      @media (min-width: 769px) and (max-width: 1272px) {
+        font-size: 72px;
+        text-align: center;
+      }
+      @media (min-width: 200px) and (max-width: 768px) {
+        font-size: 38px;
+        text-align: center;
+      }
+    }
+    & p {
+      margin-bottom: 16px;
+      max-width: 600px;
+      opacity: 0;
+      transform: translateY(20px);
+      @media (min-width: 1273px) {
+        font-size: 24px;
+      }
+      @media (min-width: 769px) and (max-width: 1272px) {
+        font-size: 20px;
+        text-align: center;
+        align-self: center;
+      }
+      @media (min-width: 200px) and (max-width: 768px) {
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+    & div:last-child {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 12px;
+    flex-grow: 1;
+    overflow: hidden;
+    @media (min-width: 1273px) {
+      font-size: 72px;
+    }
+    @media (min-width: 851px) and (max-width: 1272px) {
+      grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    }
+    @media (min-width: 200px) and (max-width: 850px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+    }
+    &_item {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      flex-basis: calc(50% - 12px);
+      justify-content: center;
+      border-radius: 48px;
+      box-sizing: border-box;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(20px);
+      @media (min-width: 1273px) {
+        padding: 32px;
+      }
+      @media (min-width: 769px) and (max-width: 1272px) {
+        padding: 24px;
+        align-items: center;
+      }
+      @media (min-width: 200px) and (max-width: 768px) {
+        align-items: center;
+        max-height: 250px;
+        padding: 20px;
+      }
+      & h2,
+      p,
+      img {
+        z-index: 2;
+        @media (min-width: 1273px) {
+          min-width: 64px;
+          min-height: 64px;
+        }
+        @media (min-width: 769px) and (max-width: 1272px) {
+          min-width: 48px;
+          min-height: 48px;
+        }
+        @media (min-width: 200px) and (max-width: 768px) {
+          min-width: 24px;
+          min-height: 24px;
+        }
+      }
+      & p {
+        @media (min-width: 1273px) {
+          font-size: 24px;
+          width: 90%;
+        }
+        @media (min-width: 769px) and (max-width: 1272px) {
+          font-size: 20px;
+          width: 80%;
+          text-align: center;
+        }
+        @media (min-width: 200px) and (max-width: 768px) {
+          font-size: 15px;
+          text-align: center;
+          width: 100%;
+        }
+      }
+      & h2 {
+        margin-bottom: 8px;
+        opacity: 0;
+        transform: translateY(20px);
+        @media (min-width: 1273px) {
+          font-size: 72px;
+        }
+        @media (min-width: 769px) and (max-width: 1272px) {
+          font-size: 48px;
+        }
+        @media (min-width: 200px) and (max-width: 768px) {
+          font-size: 32px;
+        }
+      }
+    }
+  }
+  &__img-black {
+    background-size: cover;
+    background-position: center;
+    color: $BRANDCREAMWHITE;
+    
+    &::after {
+      position: absolute;
+      content: "";
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($BRANDBLACK, 0.3);
+    }
+  }
+  
+
+  &__img3{
+    @media (min-width: 200px) and (max-width: 850px) {
+      order:-1;
+    }
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../sass/abstract/variable.scss";
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 296px;
+    min-width: 200px;
+    width: 100%;
+    border-radius: 16px;
+    text-decoration: none;
+    text-wrap: nowrap;
+    font-family: Garamond-Medium;
+    font-size: 24px;
+    box-sizing: border-box;
+    cursor: pointer;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all ease-in-out 0.2s;
+    outline: 2px solid transparent;
+    text-transform: uppercase;
+    &:hover{
+        outline: 2px solid rgba($BRANDCREAMWHITE, $alpha: 0.3);
+    }
+    &:active{
+        transform: scale(0.98);
+        opacity: 0.8;
+    }
+    @media (min-width:1273px) {
+        font-size: 24px;
+        padding: 32px;
+    }
+    @media (min-width: 769px) and (max-width: 1272px){
+        font-size: 20px;
+        padding: 24px;
+    }
+    @media (min-width: 200px) and (max-width: 768px) {
+        font-size: 16px;
+        padding: 16px;
+    }
+    &--white-fill{
+        background-color: $BRANDCREAMWHITE;
+        border: 1px solid transparent;
+        color: $BRANDBLACK;
+    }
+    &--white-trans-stroke{
+        background-color: transparent;
+        border: 1px solid $BRANDCREAMWHITE;
+        color: $BRANDCREAMWHITE;
+    }
+    &--sandy-fill{
+        background-color: $BRANDSANDY;
+        border: 1px solid $BRANDSANDY;
+        color: $BRANDBLACK;
+    }
+    
+}

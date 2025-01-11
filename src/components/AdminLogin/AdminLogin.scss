@@ -1,0 +1,57 @@
+@import "../../sass/abstract/variable.scss";
+.admin-login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    &__form{
+        display: flex;
+        flex-direction: column;
+        min-width: 250px;
+        max-width: 400px;
+        width: 100%;
+        gap: 24px;
+        & input {
+            padding: 16px;
+            border: 1px solid rgba($BRANDORANGE, $alpha: 0.5);
+            border-radius: 8px;
+            transition: all ease-in-out .25s;
+            outline: 4px solid transparent;
+            font-family: Montserrat-Medium;
+            font-size: 18px;
+            &:hover{
+                outline: 4px solid rgba($BRANDORANGE, $alpha: 0.5);
+                border: 1px solid rgba($BRANDORANGE, $alpha: 0.8);
+            }
+            &:focus{
+                outline: 4px solid rgba($BRANDORANGE, $alpha: 1);
+                border: 1px solid rgba($BRANDORANGE, $alpha: 1);
+            }
+        }
+        & button {
+            padding: 16px;
+            font-family: Montserrat-Medium;
+            font-size: 18px;
+            border: none;
+            border-radius: 8px;
+            background-color: rgba($BRANDORANGE, $alpha: 1);
+            color: $BRANDCREAMWHITE;
+            outline: 4px solid transparent;
+            cursor: pointer;
+            transition: all ease-in-out .25s;
+            &:hover{
+                outline: 4px solid rgba($BRANDORANGE, $alpha: 0.5);
+            }
+        }
+    }
+    & ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $BRANDBLACK;
+        text-transform: uppercase;
+        font-family: Montserrat-Medium;
+        font-size: 12px;
+    }
+}

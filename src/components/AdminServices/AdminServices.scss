@@ -1,0 +1,152 @@
+@import "../../sass/abstract/mixin.scss";
+@import "../../sass/abstract/variable.scss";
+.admin-services {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+  max-height: 80vh;
+  @media (min-width: 200px) and (max-width: 767px) {
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__mobile {
+    display: none;
+    padding: 12px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba($BRANDPANTONE, $alpha: 0.3);
+    border-radius: 24px;
+    @media (min-width: 200px) and (max-width: 767px) {
+      display: flex;
+    }
+    & button {
+      display: flex;
+      border-radius: 12px;
+      padding: 6px;
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      background-color: rgba($BRANDPANTONE, $alpha: 0.2);
+      transition: all ease-in-out .25s;
+      &:hover{
+        background-color: rgba($BRANDPANTONE, $alpha: 0.5);
+      }
+      & svg {
+        fill: $BRANDBLACK;
+      }
+    }
+  }
+  &__type {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    flex: 1;
+    min-width: 250px;
+    box-sizing: border-box;
+    padding: 12px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    border-radius: 24px;
+    background-color: rgba($BRANDPANTONE, $alpha: 0.3);
+    @media (min-width: 200px) and (max-width: 767px) {
+      display: none;
+    }
+    &_add-btn {
+      @include admin-input-btn;
+      position: sticky;
+      top: 0;
+      border-radius: 12px;
+      @media (min-width: 200px) and (max-width: 767px) {
+        display: none;
+      }
+    }
+    & ul {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      & li {
+        & button {
+          display: flex;
+          border: none;
+          padding: 12px;
+          width: 100%;
+          height: 48px;
+          box-sizing: border-box;
+          cursor: pointer;
+          padding: 8px 12px;
+          align-items: center;
+          justify-content: center;
+          transition: all ease-in-out 0.25s;
+          border-radius: 12px;
+          font-family: Montserrat-SemiBold;
+          font-size: 15px;
+          &:hover {
+            background-color: rgba($BRANDPANTONE, $alpha: 0.3);
+          }
+        }
+      }
+    }
+  }
+  &__content {
+    flex: 3;
+    padding: 12px;
+    height: fit-content;
+    max-height: 100%;
+    border-radius: 24px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    background-color: rgba($BRANDPANTONE, $alpha: 0.3);
+    &_form {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      & input {
+        @include admin-input;
+        width: 100%;
+        margin-top: 4px;
+        box-sizing: border-box;
+      }
+      &-row {
+        display: flex;
+        gap: 12px;
+        & input,
+        & label {
+          flex: 1;
+        }
+        & label {
+          font-family: Montserrat-Regular;
+          font-size: 12px;
+        }
+      }
+      &-column {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        & div {
+          display: flex;
+          justify-content: space-between;
+          gap: 12px;
+          & label {
+            font-family: Montserrat-Regular;
+            font-size: 12px;
+            flex: 1;
+          }
+        }
+      }
+      & button {
+        @include admin-input-btn;
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
+.admin-active-btn {
+  background-color: rgba($BRANDPANTONE, 0.8);
+  color: $BRANDCREAMWHITE;
+  &:hover.admin-active-btn {
+    background-color: rgba($BRANDPANTONE, 1);
+  }
+}

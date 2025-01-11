@@ -1,0 +1,348 @@
+@import "../../sass/abstract/variable.scss";
+.why {
+  color: $BRANDBLACK;
+  background-color: $BRANDCREAMWHITE;
+  height: fit-content;
+  max-height: fit-content;
+  @media (min-width: 1273px) {
+    border-bottom-left-radius: 90px;
+    border-bottom-right-radius: 90px;
+  }
+  @media (min-width: 769px) and (max-width: 1272px) {
+    border-bottom-left-radius: 64px;
+    border-bottom-right-radius: 64px;
+  }
+  @media (min-width: 200px) and (max-width: 768px) {
+    border-bottom-left-radius: 48px;
+    border-bottom-right-radius: 48px;
+  }
+  &__container.container {
+    @media (min-width: 1273px) {
+      gap: 90px;
+    }
+    @media (min-width: 769px) and (max-width: 1272px) {
+      gap: 48px;
+    }
+    @media (min-width: 200px) and (max-width: 768px) {
+      gap: 48px;
+    }
+  }
+  &__article:nth-child(2) {
+    @media (min-width: 1273px) {
+    }
+    @media (min-width: 1001px) and (max-width: 1272px) {
+    }
+    @media (min-width: 200px) and (max-width: 1000px) {
+      flex-direction: column-reverse;
+    }
+  }
+  &__article {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    max-height: 1080px;
+    gap: 24px;
+    @media (min-width: 1273px) {
+    }
+    @media (min-width: 1001px) and (max-width: 1272px) {
+    }
+    @media (min-width: 200px) and (max-width: 1000px) {
+      flex-direction: column;
+      height: fit-content;
+      max-height: fit-content
+    }
+    &_text-end {
+      @media (min-width: 1273px) {
+        align-items: end;
+      }
+      @media (min-width: 1001px) and (max-width: 1272px) {
+        align-items: end;
+      }
+      @media (min-width: 200px) and (max-width: 1000px) {
+        align-items: center;
+      }
+      & h1 {
+        @media (min-width: 1273px) {
+          text-align: right;
+        }
+        @media (min-width: 769px) and (max-width: 1272px) {
+          text-align: right;
+        }
+        @media (min-width: 200px) and (max-width: 768px) {
+          text-align: center;
+        }
+      }
+    }
+    &_text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex: 1;
+      gap: 24px;
+      @media (min-width: 1273px) {
+      }
+      @media (min-width: 1001px) and (max-width: 1272px) {
+      }
+      @media (min-width: 200px) and (max-width: 1000px) {
+        align-items: center;
+      }
+      & svg {
+        margin: 0 96px;
+        @media (min-width: 1273px) {
+        }
+        @media (min-width: 1001px) and (max-width: 1272px) {
+          height: 64px;
+          margin: 0 64px;
+        }
+        @media (min-width: 200px) and (max-width: 1000px) {
+          height: 48px;
+          margin: 0;
+        }
+      }
+      & h1 {
+        font-size: clamp(48px, 10vw, 98px);
+        text-transform: uppercase;
+        line-height: 100%;
+        opacity: 0;
+        transform: translateY(20px);
+        font-size: 100px;
+        @media (min-width: 1273px) and (max-width: 1400px){
+          font-size: 74px;
+        }
+        @media (min-width: 1001px) and (max-width: 1272px) {
+          font-size: 64px;
+        }
+        @media (min-width: 200px) and (max-width: 1000px) {
+          font-size: 48px;
+          text-align: center;
+        }
+      }
+      & p {
+        max-width: 500px;
+        opacity: 0;
+        transform: translateY(20px);
+        @media (min-width: 1273px) {
+          font-size: 24px;
+        }
+        @media (min-width: 1001px) and (max-width: 1272px) {
+          font-size: 20px;
+        }
+        @media (min-width: 200px) and (max-width: 1000px) {
+          text-align: center;
+          font-size: 18px;
+        }
+      }
+    }
+    &_media {
+      display: flex;
+      flex: 1;
+      align-items: center;
+    }
+  }
+  &__atmosfera-grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: 12px;
+    grid-template-areas:
+      "atm-1 atm-3 atm-3"
+      "atm-1 atm-3 atm-3"
+      "atm-1 atm-4 atm-4"
+      "atm-1 atm-4 atm-4"
+      "atm-2 atm-4 atm-4"
+      "atm-2 atm-4 atm-4"
+      "atm-2 atm-5 atm-6"
+      "atm-2 atm-5 atm-6";
+    @media (min-width: 1273px) {
+      max-height: 700px;
+      grid-template-columns:repeat(3, 1fr) ;
+      grid-template-rows:repeat(8, 1fr) ;
+    }
+    @media (min-width: 769px) and (max-width: 1272px) {
+      max-height: 500px;
+    }
+    @media (min-width: 501px) and (max-width: 768px) {
+      grid-template-areas:
+      "atm-1 atm-2"
+      "atm-3 atm-4"
+      "atm-5 atm-6";
+      
+    }
+    @media (min-width: 200px) and (max-width: 500px) {
+      grid-template-areas:
+        "atm-1"
+        "atm-2"
+        "atm-3"
+        "atm-4"
+        "atm-5"
+        "atm-6";
+    }
+  }
+  &__tool-grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: 12px;
+    grid-template-areas:
+      "tool-1 tool-1 tool-4"
+      "tool-1 tool-1 tool-4"
+      "tool-2 tool-2 tool-4"
+      "tool-2 tool-2 tool-4"
+      "tool-2 tool-2 tool-5"
+      "tool-2 tool-2 tool-5"
+      "tool-3 tool-3 tool-5"
+      "tool-3 tool-3 tool-5";
+    @media (min-width: 1273px) {
+      max-height: 700px;
+      grid-template-columns:repeat(3, 1fr) ;
+      grid-template-rows:repeat(8, auto) ;
+    }
+    @media (min-width: 769px) and (max-width: 1272px) {
+      max-height: 500px;
+      grid-template-columns:repeat(3, 1fr) ;
+      grid-template-rows:repeat(8, 1fr) ;
+    }
+    @media (min-width: 501px) and (max-width: 768px) {
+      grid-template-areas:
+      "tool-1 tool-2"
+      "tool-3 tool-3"
+      "tool-4 tool-5";
+      grid-template-columns:repeat(2, 1fr) ;
+      grid-template-rows:repeat(3, auto) ;
+    }
+    @media (min-width: 200px) and (max-width: 500px) {
+      grid-template-columns:repeat(1, 1fr) ;
+      grid-template-rows:auto;
+      grid-template-areas:
+        "tool-1"
+        "tool-2"
+        "tool-3"
+        "tool-4"
+        "tool-5";
+    }
+  }
+  &__medic-grid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: 12px;
+    grid-template-areas:
+      "med-1 med-1 med-3"
+      "med-1 med-1 med-3"
+      "med-1 med-1 med-3"
+      "med-2 med-4 med-4"
+      "med-2 med-4 med-4"
+      "med-2 med-4 med-4";
+    @media (min-width: 1273px) {
+      max-height: 700px;
+      grid-template-columns:repeat(3, 1fr) ;
+      grid-template-rows:repeat(6, 1fr) ;
+    }
+    @media (min-width: 769px) and (max-width: 1272px) {
+      grid-template-areas:
+      "med-1 med-1 med-3"
+      "med-1 med-1 med-3"
+      "med-1 med-1 med-3"
+      "med-2 med-4 med-4"
+      "med-2 med-4 med-4"
+      "med-2 med-4 med-4";
+      max-height: 500px;
+      grid-template-columns:repeat(3, 1fr) ;
+      grid-template-rows:repeat(6, 1fr) ;
+    }
+    @media (min-width: 501px) and (max-width: 768px) {
+      grid-template-columns:repeat(2, 1fr) ;
+      grid-template-rows:repeat(2, 1fr) ;
+      grid-template-areas:
+      "med-1 med-2"
+      "med-3 med-4";
+      
+    }
+    @media (min-width: 200px) and (max-width: 500px) {
+      grid-template-columns:1fr ;
+      grid-template-rows:auto ;
+      grid-template-areas:
+        "med-1"
+        "med-2"
+        "med-3"
+        "med-4";
+    }
+  }
+  &__grid-image {
+    overflow: hidden;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all ease-in-out 0.25s;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    @media (min-width: 1273px) {
+      border-radius: 64px;
+    }
+    @media (min-width: 769px) and (max-width: 1272px) {
+      border-radius: 48px;
+    }
+    @media (min-width: 200px) and (max-width: 768px) {
+      border-radius: 24px;
+      aspect-ratio: 1 / 1;
+    }
+  }
+}
+
+.atm-grid-1 {
+  grid-area: atm-1;
+}
+.atm-grid-2 {
+  grid-area: atm-2;
+}
+.atm-grid-3 {
+  grid-area: atm-3;
+}
+.atm-grid-4 {
+  grid-area: atm-4;
+}
+.atm-grid-5 {
+  grid-area: atm-5;
+}
+.atm-grid-6 {
+  grid-area: atm-6;
+}
+// TOOL
+.tool-grid-1 {
+  grid-area: tool-1;
+}
+.tool-grid-2 {
+  grid-area: tool-2;
+}
+.tool-grid-3 {
+  grid-area: tool-3;
+}
+.tool-grid-4 {
+  grid-area: tool-4;
+}
+.tool-grid-5 {
+  grid-area: tool-5;
+}
+// MEDIC
+.med-grid-1 {
+  grid-area: med-1;
+}
+.med-grid-2 {
+  grid-area: med-2;
+}
+.med-grid-3 {
+  grid-area: med-3;
+}
+.med-grid-4 {
+  grid-area: med-4;
+}
+.med-grid-1,
+.med-grid-2,
+.med-grid-3,
+.med-grid-4 {
+  & img {
+  }
+}

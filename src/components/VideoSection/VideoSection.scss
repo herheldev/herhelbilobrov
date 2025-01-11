@@ -1,0 +1,25 @@
+@import "../../sass/abstract/variable.scss";
+.video{
+    padding: 0;
+    background-color: $BRANDCREAMWHITE;
+    &__media{
+        width: 100%;
+        height: fit-content;
+        object-fit: cover;
+      box-sizing: border-box;
+      padding: 48px;
+        border-radius: 90px;
+        opacity: 0;
+        transform: translateY(20px);
+        background-color: $BRANDPANTONE;
+        @media (min-width: 1273px) {
+            border-radius: 90px;
+          }
+          @media (min-width: 769px) and (max-width: 1272px) {
+            border-radius: 64px;
+          }
+          @media (min-width: 200px) and (max-width: 768px) {
+            border-radius: 48px;
+          }
+    }
+}

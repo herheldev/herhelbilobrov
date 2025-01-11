@@ -1,0 +1,206 @@
+@import "../../../src/sass/abstract/variable.scss";
+@import "../../../src/sass/base/reset.scss";
+@import "../../../src/sass/layout/container.scss";
+@import "../../../src/sass/abstract/variable.scss";
+html{
+    color: $BRANDCREAMWHITE ;
+    scroll-behavior: smooth;
+}
+ul, ol {
+    padding: 0;
+    display: flex;
+    margin: 0;
+    list-style-type: none;
+}
+h1, h2, h3, p{
+    padding: 0;
+    margin: 0;
+}
+h1, h2 {
+    font-family: var(--font-garamondMedium);
+}
+
+h3, p {
+  font-family: var(--font-montseratMedium);
+}
+body {
+    padding: 0;
+    margin: 0;
+}
+section {
+    width: 100%;
+    // min-height: 100vh;
+    height: 100vh;
+    max-height: 1080px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: center;
+    box-sizing: border-box;
+    padding: 48px 48px;
+    @media (min-width:1273px) {
+        
+    }
+    @media (min-width: 769px) and (max-width: 1272px){
+        padding: 32px 32px;
+    }
+    @media (min-width: 200px) and (max-width: 768px) {
+        padding: 24px 24px;
+    }
+}
+
+.section__title{
+    font-size: clamp(48px , 9.5vw, 72px);
+}
+
+* ::selection{
+    color: $BRANDORANGE;
+
+}
+.hide-animate{
+    animation-name: hideanimate;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+ &--visible{
+    visibility: hidden;
+ }
+}
+.show-animate{
+    
+    animation-name: showanimate;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+@keyframes showanimate {
+    0%{
+        opacity: 0;   
+    }
+    
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes hideanimate {
+    0%{
+        opacity: 1;
+        transform: translateY(0); 
+    }
+    
+    100%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    background-color: $BRANDBRIGHTSANDY;
+    // overflow-x: hidden;
+    // overflow-y: scroll;
+  
+    // scrollbar-width: none;
+    z-index: 10;
+    box-sizing: border-box;
+    overflow: hidden;
+    border-top-left-radius: 90px;
+    border-top-right-radius: 90px;
+    // scroll-snap-type: y mandatory;
+    @media (min-width: 1273px) {
+      border-top-left-radius: 90px;
+      border-top-right-radius: 90px;
+    }
+    @media (min-width: 769px) and (max-width: 1272px) {
+      border-top-left-radius: 64px;
+      border-top-right-radius: 64px;
+    }
+    @media (min-width: 200px) and (max-width: 768px) {
+      border-top-left-radius: 48px;
+      border-top-right-radius: 48px;
+    }
+  }
+
+  .btn-admin-primary {
+    display: flex;
+    padding:4px 12px;
+    text-decoration: none;
+    min-height: 20px;
+    align-items: center;
+    border-radius: 8px;
+    font-family: var(--font-montseratMedium);
+    font-size: 13px;
+    line-height: normal;
+    color: #303030;
+    background-color: #e3e3e3;
+    transition: all ease-in-out 0.25s;
+&:hover{
+background-color: #d4d4d4;
+}
+}
+.btn-admin-main{
+    display: flex;
+    justify-content: center;
+    padding:4px 12px;
+    text-decoration: none;
+    min-height: 20px;
+    align-items: center;
+    border-radius: 8px;
+    font-family: var(--font-montseratMedium);
+    font-size: 13px;
+    line-height: normal;
+    cursor: pointer;
+    transition: all ease-in-out 0.25s;
+    background-color: #212529;
+    color:white;
+    &:hover{
+        background-color:#2a2f34 ;
+    }
+    &:disabled{
+        cursor:not-allowed;
+      opacity: 0.5;
+    }
+}
+
+.btn-admin-back{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: none;
+    gap:8px;
+    cursor: pointer;
+    transition: all ease-in-out .25s;
+    &:hover svg {
+        fill: #c7c7c7;
+    }
+    &:active svg {
+        fill: #b1adad;
+    }
+    &:active{
+        scale: 0.9;
+    }
+
+}
+
+.progres-admin-bar{
+    position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background-color: #F9B577;
+  z-index: 9999;
+  transition: width 0.2s ease-out, opacity 0.3s ease-out;
+  opacity: 1;
+
+}
+
+.admin-input-style{
+  padding: 8px 12px;
+  border-radius: 8px;
+  width: 100%;
+  border: 1px solid #c3c3c3;
+  box-sizing: border-box;
+}

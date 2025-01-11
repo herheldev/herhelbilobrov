@@ -1,0 +1,64 @@
+@import "../../sass/abstract/variable.scss";
+.quate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+  background-color: $BRANDCREAMWHITE;
+  & h1 {
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    @media (min-width:1273px) {
+        font-size: 72px;
+    }
+    @media (min-width: 769px) and (max-width: 1272px){
+        font-size: 48px;
+    }
+    @media (min-width: 200px) and (max-width: 768px) {
+        font-size: 32px;
+    }
+  }
+  & svg {
+    margin: 32px 0;
+    align-self: center;
+  }
+  & p {
+    text-align: center;
+    font-family: Montserrat-SemiBold;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  & > span{
+    
+    
+  }
+  &__img1, &__img2{
+    display: inline-flex;
+    width: 266px;
+    max-width: 266px;
+    height: 88px;
+    border-radius: 64px;
+    transform: translateY(25%);
+    background-size: cover;
+    @media (min-width:1273px) {
+        
+    }
+    @media (min-width: 769px) and (max-width: 1272px){
+        width: 150px;
+        height: 58px;
+    }
+    @media (min-width: 200px) and (max-width: 768px) {
+        width: 100px;
+        height: 40px;
+    }
+  }
+  &__img1 {
+    background-image: url("./imgdecor1.png");
+    margin-right: 10px;
+  }
+  &__img2 {
+    background-image: url("./imgdecor2.png");
+    margin-right: 10px
+  }
+}

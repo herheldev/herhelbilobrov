@@ -1,0 +1,89 @@
+@import "../../sass/abstract/mixin.scss";
+@import "../../sass/abstract/variable.scss";
+.admin-media{
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    gap: 32px;
+    @media (min-width:1273px) {
+            
+    }
+    @media (min-width: 769px) and (max-width: 1272px){
+       
+    }
+    @media (min-width: 200px) and (max-width: 768px) {
+        flex-direction: column;
+    }
+    &__add{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 24px;
+        
+        & form {
+            display: flex;
+            flex-direction: column;
+            & input{
+                @include admin-input;
+                margin-bottom: 6px
+            }
+            & button{
+                @include admin-input-btn;
+            }
+        }
+        &_error{
+            color: red;
+            font-family: Montserrat-Regular;
+            font-size: 12px;
+            display: flex;
+            min-height: 15px;
+            margin-bottom: 6px;
+        }
+    }
+    &__content{
+        display: flex;
+        flex-direction: row;
+        flex: 3;
+        flex-wrap: wrap;
+        gap: 12px;
+        @media (min-width:1273px) {
+            
+        }
+        @media (min-width: 769px) and (max-width: 1272px){
+           
+        }
+        @media (min-width: 200px) and (max-width: 768px) {
+            justify-content: center;
+        }
+    }
+
+    &__article{
+        display: flex;
+        width: 100%;
+        flex: 1;
+        max-width: 250px;
+        min-width: 250px;
+        flex-direction: column;
+        justify-content: space-between;
+        box-sizing: border-box;
+        padding: 12px;
+        border: 1px solid $BRANDORANGE;
+        border-radius: 24px;
+        gap: 12px;
+        & img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        & h2 {
+            font-family: Montserrat-Regular;
+            font-size: 16px;
+            max-height: 80px;
+            text-overflow: clip;
+        }
+        & button {
+            @include admin-input-btn;
+        }
+    }
+}

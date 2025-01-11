@@ -1,0 +1,118 @@
+.translationRoot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 24px;
+
+  &_menu {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%;
+    max-width: 200px;
+    padding: 12px;
+    border-radius: 24px;
+    background-color: rgba(167, 180, 227, 0.3);
+    & ul {
+      display: flex;
+      flex-direction: column;
+      & li {
+        & a {
+          display: flex;
+          width: 100%;
+          padding: 12px;
+          justify-content: center;
+          box-sizing: border-box;
+          border-radius: 12px;
+          &:hover {
+            background-color: rgba(167, 180, 227, 0.6);
+          }
+        }
+      }
+    }
+  }
+  &_content {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    background-color: rgba(167, 180, 227, 0.3);
+    border-radius: 24px;
+    padding: 12px;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    position: relative;
+
+    &__form {
+      font-family: var(--font-montseratMedium);
+      &_label-img-wrap{
+        display: flex;
+        justify-content:space-between;
+      }
+      
+      &_input-file-img-small {
+        display: flex;
+        position: relative;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        cursor: pointer;
+        
+        & input[type="file"] {
+          visibility: hidden;
+          width: 100%;
+          height: 100%;
+        }
+        & button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 16px;
+          height: 16px;
+        }
+      }
+      & td {
+      }
+      & table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+      }
+      & td {
+        padding: 6px;
+        transition: all ease-in-out 0.25s;
+      }
+      &_tbody {
+        &:hover td {
+          background-color: rgba(167, 180, 227, 0.5);
+        }
+        & tr:first-child td:first-child {
+          border-top-left-radius: 12px;
+        }
+        & tr:first-child td:last-child {
+          border-top-right-radius: 12px;
+        }
+        & tr:last-child td:first-child {
+          border-bottom-left-radius: 12px;
+        }
+        & tr:last-child td:last-child {
+          border-bottom-right-radius: 12px;
+        }
+      }
+      &_textarea {
+        resize: none;
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 6px;
+        padding: 4px 8px;
+        border: 1px solid rgba(167, 180, 227, 0.5);
+        &:hover {
+          outline: 3px solid rgba(167, 180, 227, 0.9);
+        }
+      }
+      &_textarea_p {
+        min-height: 120px;
+      }
+    }
+  }
+}

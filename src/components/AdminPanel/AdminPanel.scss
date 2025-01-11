@@ -1,0 +1,207 @@
+@import "../../sass/abstract/variable.scss";
+.admin-panel {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-height: 1080px;
+  min-height: 500px;
+  height: 100vh;
+  color: $BRANDBLACK;
+  width: 100%;
+  gap: 24px;
+  padding: 0;
+  overflow: hidden;
+ background-color: #f1f1f1;
+  
+  &__mobile-menu {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: $BRANDBLACK;
+    z-index: 100;
+    align-items: center;
+    justify-content: center;
+    transition: all ease-in-out 0.5s;
+    & ul {
+      flex-direction: column;
+      gap: 24px;
+      & li {
+        
+        & a {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          text-decoration: none;
+          cursor: pointer;
+          & h3 {
+            color: $BRANDCREAMWHITE;
+            font-size: 32px;
+          }
+        }
+      }
+    }
+    @media (min-width: 200px) and (max-width: 767px) {
+      display: flex;
+    }
+    &_btn {
+      display: none;
+      width: 48px;
+      height: 48px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 110;
+      @media (min-width: 200px) and (max-width: 767px) {
+        display: block;
+      }
+      & svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &__container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    min-height: fit-content;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-top: 32px;
+    height: 100%;
+    flex-direction: column;
+  }
+  &__nav {
+    display: flex;
+    width: 100%;
+    max-width: 250px;
+    min-width: 150px;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    align-items: center;
+    padding: 32px 24px;
+    background-color: #212529;
+    color: $BRANDCREAMWHITE;
+    &_logo {
+      display: flex;
+      align-items: center;
+      width: 150px;
+      min-width: 150px;
+      margin-left: 12px;
+      z-index: 110;
+      & svg {
+        width: 100%;
+      }
+    }
+    &_menu {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+      @media (min-width: 200px) and (max-width: 767px) {
+        display: none;
+      }
+      & li:last-child {
+        & a {
+          cursor: pointer;
+          &:hover {
+            background-color: rgb(216, 57, 57);
+          }
+          & svg {
+          }
+        }
+      }
+      & li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & a {
+          color: $BRANDCREAMWHITE;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap:8px;
+          width: 100%;
+          font-family: var(--font-montseratRegular);
+          text-decoration: none;
+          padding: 6px;
+          border-radius: 12px;
+          transition: all ease-in-out 0.25s;
+          & svg path {
+            transition: all ease-in-out .25s;
+          }
+          &:hover {
+            background-color: #343A40;
+
+            & svg  path.iconWhite  {
+              fill: white;
+            }
+            & svg  path.iconWhite-strblack  {
+              fill: white;
+              stroke: #212529;
+            }
+            & svg path.iconBlack{
+              fill: #212529;
+              stroke: #212529;
+            }
+            & svg path.iconBlack-notfill{
+              
+              stroke: #212529;
+            }
+          }
+          &:active {
+            background-color: #505050;
+            & svg  path.iconWhite  {
+              fill: white;
+              opacity: 0.8;
+            }
+            
+          }
+          & svg {
+            width: 24px;
+            height: 24px;
+          }
+          & span {
+            font-size: 10px;
+          }
+        }
+        .menu-active {
+          background-color: #4b4a4a;
+          &:active {
+            background-color: #505050;
+          }
+          & svg {
+            fill: $BRANDCREAMWHITE;
+          }
+        }
+      }
+    }
+    &_exit {
+      display: flex;
+      border: none;
+      background-color: transparent;
+      height: 100%;
+      align-items: center;
+      cursor: pointer;
+      font-family: Montserrat-SemiBold;
+      color: $BRANDCREAMWHITE;
+    }
+  }
+  &__content {
+    display: flex;
+    width: 100%;
+    max-height: 100vh;
+    min-height: 100vh;
+    padding-right: 24px;
+    flex: 1;
+   
+    justify-content: center;
+    box-sizing: border-box;
+    overflow-y: scroll;
+  }
+}

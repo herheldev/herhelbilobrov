@@ -1,0 +1,253 @@
+@import "../../sass/abstract/variable.scss";
+@import "../../sass/abstract/mixin.scss";
+.admin-message {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  max-height: 100%;
+  height: 80vh;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  overflow-x: hidden;
+  gap: 32px;
+  font-family: Montserrat-Regular;
+  @media (min-width: 200px) and (max-width: 767px) {
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__mobile {
+    display: none;
+    padding: 12px;
+    border-radius: 24px;
+    
+    background-color: rgba($BRANDPANTONE, $alpha: 0.3);
+    & button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      width: 100%;
+      height: 32px;
+      border: none;
+      border-radius: 12px;
+      text-transform: uppercase;
+      color: rgba($BRANDBLACK, $alpha: 1);
+      font-family: Montserrat-SemiBold;
+      &:active{
+        background-color: rgba($BRANDPANTONE, $alpha: 1);
+      }
+      &:hover{
+        background-color: rgba($BRANDPANTONE, $alpha: 0.3);
+      }
+    }
+    @media (min-width: 200px) and (max-width: 767px) {
+      display: flex;
+    }
+  }
+  &__user {
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+    flex: 1;
+    min-height: 500px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    padding: 12px;
+    border-radius: 24px;
+    background-color: rgba($BRANDPANTONE, $alpha: 0.3);
+    @media (min-width: 200px) and (max-width: 767px) {
+      display: none;
+    }
+    &_btn {
+      display: flex;
+      width: 100%;
+      height: 48px;
+      padding: 8px 12px;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      justify-content: space-between;
+      border-radius: 12px;
+      border: none;
+      color: rgba($BRANDBLACK, $alpha: 1);
+      background-color: #ffffff;
+      transition: all cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+      font-family: Montserrat-Bold;
+      &:hover {
+        background-color: rgba($BRANDPANTONE, $alpha: 0.3);
+      }
+      &--active {
+        color: rgba($BRANDCREAMWHITE, $alpha: 1);
+        background-color: rgba($BRANDPANTONE, $alpha: 0.7);
+        &:hover {
+          background-color: rgba($BRANDPANTONE, $alpha: 1);
+        }
+      }
+      & span:last-child {
+        display: flex;
+        padding: 3px;
+        min-width: 12px;
+        min-height: 12px;
+        border-radius: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(197, 77, 77);
+        color: $BRANDCREAMWHITE;
+        font-size: 10px;
+      }
+    }
+  }
+  &__message {
+    display: flex;
+    padding: 12px;
+    flex: 3;
+    min-height: 500px;
+    background-color: rgba($BRANDPANTONE, $alpha: 0.3);
+    border-radius: 24px;
+    &_firstDisplay {
+      display: flex;
+      margin: auto;
+      & h1 {
+        font-family: Montserrat-Bold;
+        color: rgba($BRANDBLACK, $alpha: 0.5);
+      }
+    }
+  }
+  &__message-block,
+  & .message-block {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    flex: 1;
+    height: 100%;
+    gap: 12px;
+
+    &__header {
+      display: flex;
+      box-sizing: border-box;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px;
+      border-radius: 12px;
+      background-color: rgba(#ffffff, $alpha: 1);
+      color: rgba($BRANDBLACK, $alpha: 1);
+      box-shadow: 0 0 13px 3px rgba(167, 180, 227, 0.15);
+      & h1 {
+        font-family: Montserrat-Bold;
+        font-size: 18px;
+        margin-bottom: 4px;
+      }
+      &_info {
+        & ul {
+          flex-direction: column;
+          & li {
+            color: rgba($BRANDBLACK, $alpha: 0.5);
+            & h3 {
+              text-align: left;
+              cursor: pointer;
+              font-size: 13px;
+              &:hover {
+                color: rgba($BRANDPANTONE, $alpha: 1);
+              }
+            }
+          }
+        }
+      }
+      & button {
+        display: flex;
+        border: none;
+        cursor: pointer;
+        background-color: transparent;
+        & svg {
+          width: 32px;
+          height: 32px;
+          fill: rgba($BRANDBLACK, $alpha: 0.5);
+          transition: all ease-in-out 0.25s;
+          &:hover {
+            fill: rgba(red, $alpha: 0.5);
+          }
+        }
+      }
+    }
+    &__message {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow-y: scroll;
+      width: 100%;
+      flex: 1;
+      align-items: flex-end;
+      scrollbar-width: none;
+
+      & ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      &_pop-up {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 12px;
+        margin-left: 12px;
+        max-width: 400px;
+        color: rgba($BRANDBLACK, $alpha: 1);
+        background-color: rgba(#ffffff, $alpha: 1);
+        border-radius: 12px;
+        cursor: pointer;
+        gap: 12px;
+        box-shadow: 0 0 7px 2px rgba($BRANDPANTONE, $alpha: 0.15);
+        z-index: 10;
+        
+        &:active {
+          background-color: rgba(#e0e0e0, $alpha: 1);
+        }
+        & h4 {
+          margin: 0;
+          font-size: 12px;
+          color: rgba($BRANDPANTONE, $alpha: 1);
+        }
+      }
+      &_date-status {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        & span:first-child {
+          font-size: 12px;
+          font-family: Montserrat-Regular;
+          opacity: 0.8;
+        }
+        & span:last-child {
+          height: 20px;
+          & svg {
+            fill: rgba($BRANDPANTONE, $alpha: 1);
+          }
+        }
+      }
+    }
+    &__action {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      & a {
+        display: flex;
+        border-radius: 12px;
+        padding: 12px;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        font-family: Montserrat-SemiBold;
+        color: rgba($BRANDCREAMWHITE, $alpha: 1);
+        text-decoration: none;
+        text-wrap: nowrap;
+      }
+      & a:first-child {
+        background-color: rgb(148, 172, 113);
+      }
+      & a:last-child {
+        background-color: rgba($BRANDPANTONE, $alpha: 1);
+      }
+    }
+  }
+}
