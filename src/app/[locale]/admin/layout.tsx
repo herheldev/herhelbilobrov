@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from "react";
-import { app } from "../../../bd/firebase";
+import { app,app1 } from "../../../bd/firebase";
 import { getAuth, onAuthStateChanged} from "firebase/auth";
 
 import AdminPanel from "@/components/AdminPanel/AdminPanel";
@@ -14,7 +14,9 @@ export default function AdminLayout({
 }) {
     const [user, setUser] = useState<boolean | null>(null)
     const auth = getAuth(app);
-    onAuthStateChanged(auth, (us)=>setUser(!!us))
+    const auth1 = getAuth(app1);
+    onAuthStateChanged(auth, (us)=>setUser(!!us));
+
   return (
     <>
     {user && <AdminPanel>{children}</AdminPanel>}

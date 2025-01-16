@@ -3,11 +3,11 @@ import { Link } from "@/i18n/routing";
 import "./page.scss";
 import ItemServiceAdmin from "@/components/ItemServiceAdmin/ItemServiceAdmin";
 import {getFirestore, getDocs, collection, doc, getDoc} from "firebase/firestore";
-import app from "@/bd/firebase";
+import {app1} from "@/bd/firebase";
 import {useState, useEffect} from "react";
-import {log} from "node:util";
+
 export default function ServicesAdmin() {
-const bd = getFirestore(app);
+const bd = getFirestore(app1);
     const [itemObj, setItemObj] = useState(null);
     const [category, setCategory] = useState(null);
     const [categoryState,setCategoryState] = useState("");

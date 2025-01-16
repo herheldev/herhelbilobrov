@@ -4,17 +4,16 @@ import "./ServiceSection.scss";
 import Button from "../Button/Button";
 import LineHorizontalBlack from "../Icon/LineHorizontalBlack";
 import ArrowSvg from "../Icon/ArrowSvg";
-import { useEffect, useRef, useState } from "react";
-import { app } from "../../bd/firebase";
-import { getFirestore, collection, getDocs , doc, getDoc} from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { app1 } from "../../bd/firebase";
+import { getFirestore, doc, getDoc} from "firebase/firestore";
 import PrevSvg from "../Icon/PrevSvg";
 import { useInView } from "react-intersection-observer";
 import {useLocale} from "next-intl";
-import {log} from "node:util";
-import {valueOf} from "node";
+
 const ServiceSection = () => {
 
-  const db = getFirestore(app);
+  const db = getFirestore(app1);
   const [dataService, setDataService] = useState(null);
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [selectedItem, setSelectedItem] = useState(null);
@@ -106,7 +105,7 @@ function showMobile(){
                     </li>
                     <ul>
                     {dataService && Object.entries(dataService).map((it, val) =>
-                    it[1]?.category === item[0] && it[1]?.local === "WARSAWHERHELCLINIC" && <li key={Math.random() + it[0]} ><button className={`service__item___btn ${it[1]?.[`${d}`].name === selectedItem ? "service__item___btn--active":""}`} onClick={()=> {setDetailService(it[1]?.[`${d}`]); setSelectedCategory(item[0]); setSelectedItem(it[1]?.[`${d}`].name); showMobile() } }>{it[1]?.[`${d}`].name} <ArrowSvg width={"32px"} height={"24px"}/></button></li>
+                    it[1]?.category === item[0] && it[1]?.local === "VROTSLAWBILOBROW&HERHEL" && <li key={Math.random() + it[0]} ><button className={`service__item___btn ${it[1]?.[`${d}`].name === selectedItem ? "service__item___btn--active":""}`} onClick={()=> {setDetailService(it[1]?.[`${d}`]); setSelectedCategory(item[0]); setSelectedItem(it[1]?.[`${d}`].name); showMobile() } }>{it[1]?.[`${d}`].name} <ArrowSvg width={"32px"} height={"24px"}/></button></li>
                     )}
                     </ul>
                   </ul>
