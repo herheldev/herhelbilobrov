@@ -356,7 +356,7 @@ export default function LangAbout() {
             </td>
             <td>
               <img
-                src={dataFormAbout?.en?.ABOUT.Box1?.Img}
+                src={dataFormAbout?.en?.ABOUT?.Box1?.Img}
                 width={"50px"}
                 height={"50px"}
               />
@@ -390,7 +390,7 @@ export default function LangAbout() {
             </td>
             <td>
               <img
-                src={dataFormAbout?.en?.ABOUT.Box1?.Pic}
+                src={dataFormAbout?.en?.ABOUT?.Box1?.Pic}
                 width={"50px"}
                 height={"50px"}
               />
@@ -416,7 +416,7 @@ export default function LangAbout() {
             </td>
             <td>
               <textarea
-                placeholder={dataFormAbout?.pl?.ABOUT.Box1?.Title}
+                placeholder={dataFormAbout?.pl?.ABOUT?.Box1?.Title}
                 defaultValue={dataFormAbout?.pl?.ABOUT?.Box1?.Title}
                 className="translationRoot_content__form_textarea"
                 {...register("pl_Box1_Title", {
@@ -497,7 +497,7 @@ export default function LangAbout() {
             </td>
             <td>
               <img
-                src={dataFormAbout?.en?.ABOUT.Box2?.Img}
+                src={dataFormAbout?.en?.ABOUT?.Box2?.Img}
                 width={"50px"}
                 height={"50px"}
               />
@@ -527,7 +527,7 @@ export default function LangAbout() {
             </td>
             <td>
               <img
-                src={dataFormAbout?.en?.ABOUT.Box2?.Pic}
+                src={dataFormAbout?.en?.ABOUT?.Box2?.Pic}
                 width={"50px"}
                 height={"50px"}
               />
@@ -548,7 +548,7 @@ export default function LangAbout() {
             </td>
             <td>
               <textarea
-                placeholder={dataFormAbout?.pl?.ABOUT.Box2?.Title}
+                placeholder={dataFormAbout?.pl?.ABOUT?.Box2?.Title}
                 defaultValue={dataFormAbout?.pl?.ABOUT?.Box2?.Title}
                 className="translationRoot_content__form_textarea"
                 {...register("pl_Box2_Title", {
@@ -623,7 +623,7 @@ export default function LangAbout() {
             </td>
             <td>
               <img
-                src={dataFormAbout?.en?.ABOUT.Box3?.Img}
+                src={dataFormAbout?.en?.ABOUT?.Box3?.Img}
                 width={"50px"}
                 height={"50px"}
               />
@@ -653,7 +653,7 @@ export default function LangAbout() {
             </td>
             <td>
               <img
-                src={dataFormAbout?.en?.ABOUT.Box3?.Pic}
+                src={dataFormAbout?.en?.ABOUT?.Box3?.Pic}
                 width={"50px"}
                 height={"50px"}
               />
@@ -674,7 +674,7 @@ export default function LangAbout() {
             </td>
             <td>
               <textarea
-                placeholder={dataFormAbout?.pl?.ABOUT.Box3?.Title}
+                placeholder={dataFormAbout?.pl?.ABOUT?.Box3?.Title}
                 defaultValue={dataFormAbout?.pl?.ABOUT?.Box3?.Title}
                 className="translationRoot_content__form_textarea"
                 {...register("pl_Box3_Title", {
@@ -749,7 +749,7 @@ export default function LangAbout() {
             </td>
             <td>
               <img
-                src={dataFormAbout?.en?.ABOUT.Box4?.Img}
+                src={dataFormAbout?.en?.ABOUT?.Box4?.Img}
                 width={"50px"}
                 height={"50px"}
               />
@@ -779,7 +779,7 @@ export default function LangAbout() {
             </td>
             <td>
               <img
-                src={dataFormAbout?.en?.ABOUT.Box4?.Pic}
+                src={dataFormAbout?.en?.ABOUT?.Box4?.Pic}
                 width={"50px"}
                 height={"50px"}
               />
@@ -800,7 +800,7 @@ export default function LangAbout() {
             </td>
             <td>
               <textarea
-                placeholder={dataFormAbout?.pl?.ABOUT.Box4?.Title}
+                placeholder={dataFormAbout?.pl?.ABOUT?.Box4?.Title}
                 defaultValue={dataFormAbout?.pl?.ABOUT?.Box4?.Title}
                 className="translationRoot_content__form_textarea"
                 {...register("pl_Box4_Title", {

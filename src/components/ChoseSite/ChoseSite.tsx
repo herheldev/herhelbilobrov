@@ -19,13 +19,13 @@ export default  function ChoseSite(){
 
 
                 <li>
-                    <button className={"chosesite-btn"} onClick={()=> {router.push("http://herhelbilobrov.com")}}>HERHEL CLINIC WARSZAWA</button>
+                    <button className={"chosesite-btn"} onClick={()=> {router.push("https://www.herhel.pl")}}>HERHEL CLINIC WARSZAWA</button>
                 </li>
                 <li>
                     <button className={"chosesite-btn"} onClick={()=>setShow(false)}>HERHEL&BILOBROV WROCLAW</button>
                 </li>
                 <li>
-                    <button className={"chosesite-btn"} onClick={()=> {router.push("http://herhelgasanova.com")}}>HERHEL&GACANOVA BOUTIQUE</button>
+                    <button className={"chosesite-btn"} onClick={()=> {router.push("https://www.herhelgasanova.com")}}>HERHEL&GACANOVA BOUTIQUE</button>
                 </li>
             </ul>
         </div>

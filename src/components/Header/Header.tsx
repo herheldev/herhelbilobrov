@@ -25,6 +25,7 @@ const Header = () => {
   const t = useTranslations("HEADER");
 
   async function getMedia(loc: string) {
+    console.log("asdasdasd")
     const headerData = await getDoc(doc(db, "translation", loc));
     const mediaURL = headerData.data()?.HEADER.Media;
     const mediaRef = headerData
@@ -32,9 +33,11 @@ const Header = () => {
       ?.HEADER.Media.split("?")[0]
       .split(".")
       .at(-1);
-    if (mediaRef === "png" || mediaRef === "jpeg" || mediaRef === "jpg") {
+    console.log(mediaRef);
+    if (mediaRef === "PNG" || mediaRef === "JPEG" || mediaRef === "JPG") {
       setImageOrVideo("IMG");
-    } else if (mediaRef === "mp4" || mediaRef === "avi" || mediaRef === "jpg") {
+      console.log(2323)
+    } else if (mediaRef === "MP4" || mediaRef === "AVI") {
       setImageOrVideo("VIDEO");
     }
     setHeaderDataSource(mediaURL);
@@ -44,8 +47,8 @@ const Header = () => {
     getMedia(locale);
   }, []);
 
- 
 
+  console.log(headerDataSource)
   return (
     <header ref={ref} id="header" className="header">
       <div className={`header__media`}>

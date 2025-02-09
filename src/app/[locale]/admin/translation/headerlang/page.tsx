@@ -43,9 +43,9 @@ export default function LangHeader() {
   const imgOrVideo = () => {
     if(dataFormHeader){
       const iOV = dataFormHeader?.en?.HEADER?.Media?.split("?")[0].split(".").at(-1)
-      if(iOV === "mp4"){
+      if(iOV === "MP4"){
         return "VIDEO"
-      } else if(iOV === "png"|| iOV === "jpeg" || iOV === "jpg"){
+      } else if(iOV === "PNG"|| iOV === "JPEG" || iOV === "JPG"){
         return "IMG"
       }
       

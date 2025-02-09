@@ -135,8 +135,8 @@ const Footer = () => {
         <div className="footer__copyright">
           <ul>
             <li>
-              <a href="https://www.andriitopii.com/" target="__blank">
-                Powered by Andrii Topii
+              <a href="https://www.bytesmiths.pl/" target="__blank">
+                Powered by BYTESMITHS.PL
               </a>
             </li>
             <li>
